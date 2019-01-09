@@ -34,7 +34,7 @@ H4M+ は **モデル駆動** で開発しています。
 -----------
 * **Astah** : Astah UML/Professional を [Change Vision サイト](http://astah.net/download) からダウンロードし、インストールする。  
 * **M PLUS** プラグイン : [M PLUS plug-in サイト](https://sites.google.com/view/m-plus-plugin/download) からダウンロードし、インストールする。  
-* **Helper for M PLUS** プラグイン : [リリースページ]() からダウンロードし、インストールする。  
+* **Helper for M PLUS** プラグイン : [リリースページ](https://github.com/takaakit/helper-for-m-plus/releases) からダウンロードし、インストールする。  
 
 
 使い方

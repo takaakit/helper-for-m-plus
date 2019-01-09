@@ -36,7 +36,7 @@ Installation
 ------------
 * **Astah** : Download Astah UML or Professional from [Change Vision site](http://astah.net/download), and install.  
 * **M PLUS** plug-in : Download from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-* **Helper for M PLUS** plug-in : Download from [release page](), and install.  
+* **Helper for M PLUS** plug-in : Download from [release page](https://github.com/takaakit/helper-for-m-plus/releases), and install.  
 
 
 Usage
