@@ -16,12 +16,12 @@ H4M+ is developed using **Model Driven Development**<sup><a href="#1">1</a></sup
 * The model is transformed into code using [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in.  
 * The code is **Kotlin**.  
 
-<span id="1" style="font-size:x-small">1: Model Driven Development (MDD) is a set of software development approaches based on Model Driven Architecture (MDA).</span>
-
 This images are examples of UML diagrams.  
 <a href="screenshots/basic_flow.png"><img src="screenshots/basic_flow.png" height="180"></a>
 <a href="screenshots/overview_behavior.png"><img src="screenshots/overview_behavior.png" height="180"></a>
 <a href="screenshots/overview_structure.png"><img src="screenshots/overview_structure.png" height="180"></a><br/>
+
+<span id="1" style="font-size:x-small">1: Model Driven Development (MDD) is a set of software development approaches based on Model Driven Architecture (MDA).</span>
 
 
 ******************************
