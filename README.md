@@ -11,12 +11,12 @@ Helper for M PLUS (H4M+) makes settings for [M PLUS](https://sites.google.com/vi
   etc.  
   <img src="screenshots/select_a_setting.png" width="360"><br/>
 
-H4M+ is developed using **Model Driven Development**[^1] approach.  
+H4M+ is developed using **Model Driven Development**<sup><a href="#1">1</a></sup> approach.  
 * The model is described by UML using [Astah](http://astah.net/download).  
 * The model is transformed into code using [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in.  
 * The code is **Kotlin**.  
 
-[^1]: Model Driven Development (MDD) is a set of software development approaches based on Model Driven Architecture (MDA).
+<span id="1" style="font-size:x-small">1: Model Driven Development (MDD) is a set of software development approaches based on Model Driven Architecture (MDA).</span>
 
 This images are examples of UML diagrams.  
 <a href="screenshots/basic_flow.png"><img src="screenshots/basic_flow.png" height="180"></a>
