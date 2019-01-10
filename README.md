@@ -28,7 +28,7 @@ This images are examples of UML diagrams.
 
 Available for
 -------------
-* Astah UML and Professional **ver.8.0** or higher.
+* Astah UML/Professional **ver.8.0** or higher.
 * M PLUS plug-in **ver.2.3** or higher.
 
 
