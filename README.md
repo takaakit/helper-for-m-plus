@@ -49,7 +49,7 @@ Usage
 
 Development and Building
 ------------------------
-1. Prepare [the Astah plug-in development environment](http://astah.change-vision.com/ja/tutorial/plugin.html#build).  
+1. Prepare [the Astah plug-in development environment](http://astah.net/tutorial/plug-ins/plugin_tutorial_en/html/devenv.html).  
 2. Open `helper-for-m-plus.asta` in [Astah](http://astah.net/download), and edit the model.
 3. Generate code using [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in.
 4. Open `helper-for-m-plus` directory in [IntelliJ](https://www.jetbrains.com/idea/download/), and edit the code.

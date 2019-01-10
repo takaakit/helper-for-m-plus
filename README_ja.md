@@ -32,7 +32,7 @@ UML ダイアグラムの例です。
 
 インストール
 -----------
-* **Astah** : Astah UML/Professional を [Change Vision サイト](http://astah.net/download) からダウンロードし、インストールする。  
+* **Astah** : Astah UML/Professional を [Change Vision サイト](http://astah.change-vision.com/ja/download.html) からダウンロードし、インストールする。  
 * **M PLUS** プラグイン : [M PLUS plug-in サイト](https://sites.google.com/view/m-plus-plugin/download) からダウンロードし、インストールする。  
 * **Helper for M PLUS** プラグイン : [リリースページ](https://github.com/takaakit/helper-for-m-plus/releases) からダウンロードし、インストールする。  
 
