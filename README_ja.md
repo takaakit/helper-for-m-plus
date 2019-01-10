@@ -12,11 +12,11 @@ Helper for M PLUS (H4M+) は、[M PLUS](https://sites.google.com/view/m-plus-plu
   <img src="screenshots/select_a_setting.png" width="360"><br/>
 
 H4M+ は **モデル駆動** で開発しています。  
-* [Astah](http://astah.change-vision.com/ja/download.html) を使い、UML でモデルを記述しています。  
-* [M PLUS](https://sites.google.com/view/m-plus-plugin/download) プラグインを使い、モデルからコードへ変換しています。  
+* [Astah](http://astah.change-vision.com/ja/download.html) で UML モデルを記述します。  
+* [M PLUS](https://sites.google.com/view/m-plus-plugin/download) プラグインでモデルからコードへ変換します。  
 * コードは **Kotlin** です。
 
-下記は UML ダイアグラムの例です。  
+UML ダイアグラムの例です。  
 <a href="screenshots/basic_flow.png"><img src="screenshots/basic_flow.png" height="180"></a>
 <a href="screenshots/overview_behavior.png"><img src="screenshots/overview_behavior.png" height="180"></a>
 <a href="screenshots/overview_structure.png"><img src="screenshots/overview_structure.png" height="180"></a><br/>
