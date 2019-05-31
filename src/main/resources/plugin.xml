@@ -270,6 +270,61 @@
       </actionSet>
       <actionSet>
          <menu
+                 id="crystal"
+                 label="%menu_crystal"
+                 path="m+/crystal">
+         </menu>
+         <action
+                 label="%menu_crystal_add_property_method"
+                 class="main.kotlin.service.crystal.AddPropertyMethod"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.AddPropertyMethod">
+         </action>
+         <action
+                 label="%menu_crystal_add_setter_method"
+                 class="main.kotlin.service.crystal.AddSetterMethod"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.AddSetterMethod">
+         </action>
+         <action
+                 label="%menu_crystal_add_getter_method"
+                 class="main.kotlin.service.crystal.AddGetterMethod"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.AddGetterMethod">
+         </action>
+         <action
+                 label="%menu_crystal_convert_to_class"
+                 class="main.kotlin.service.crystal.ConvertToClass"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.ConvertToClass">
+         </action>
+         <action
+                 label="%menu_crystal_convert_to_enum"
+                 class="main.kotlin.service.crystal.ConvertToEnum"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.ConvertToEnum">
+         </action>
+         <action
+                 label="%menu_crystal_convert_to_struct"
+                 class="main.kotlin.service.crystal.ConvertToStruct"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.ConvertToStruct">
+         </action>
+         <action
+                 label="%menu_crystal_convert_to_module"
+                 class="main.kotlin.service.crystal.ConvertToModule"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.ConvertToModule">
+         </action>
+         <action
+                 label="%menu_crystal_add_initialize"
+                 class="main.kotlin.service.crystal.AddInitialize"
+                 menubarPath="m+/crystal/"
+                 id="main.kotlin.service.crystal.AddInitialize">
+         </action>
+      </actionSet>
+      <actionSet>
+         <menu
                  id="go"
                  label="%menu_go"
                  path="m+/go">
@@ -561,6 +616,49 @@
       </actionSet>
       <actionSet>
          <menu
+                 id="javascript"
+                 label="%menu_javascript"
+                 path="m+/javascript">
+         </menu>
+         <action
+                 label="%menu_javascript_add_getter_setter"
+                 class="main.kotlin.service.javascript.AddGetterSetter"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.AddGetterSetter">
+         </action>
+         <action
+                 label="%menu_javascript_add_setter"
+                 class="main.kotlin.service.javascript.AddSetter"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.AddSetter">
+         </action>
+         <action
+                 label="%menu_javascript_add_getter"
+                 class="main.kotlin.service.javascript.AddGetter"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.AddGetter">
+         </action>
+         <action
+                 label="%menu_javascript_convert_to_class"
+                 class="main.kotlin.service.javascript.ConvertToClass"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.ConvertToClass">
+         </action>
+         <action
+                 label="%menu_javascript_convert_to_enum"
+                 class="main.kotlin.service.javascript.ConvertToEnum"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.ConvertToEnum">
+         </action>
+         <action
+                 label="%menu_javascript_add_constructor"
+                 class="main.kotlin.service.javascript.AddConstructor"
+                 menubarPath="m+/javascript/"
+                 id="main.kotlin.service.javascript.AddConstructor">
+         </action>
+      </actionSet>
+      <actionSet>
+         <menu
                  id="python"
                  label="%menu_python"
                  path="m+/python">
@@ -608,6 +706,24 @@
                  label="%menu_ruby"
                  path="m+/ruby">
          </menu>
+         <action
+                 label="%menu_ruby_add_attr_accessor_method"
+                 class="main.kotlin.service.ruby.AddAttrAccessorMethod"
+                 menubarPath="m+/ruby/"
+                 id="main.kotlin.service.ruby.AddAttrAccessorMethod">
+         </action>
+         <action
+                 label="%menu_ruby_add_attr_writer_method"
+                 class="main.kotlin.service.ruby.AddAttrWriterMethod"
+                 menubarPath="m+/ruby/"
+                 id="main.kotlin.service.ruby.AddAttrWriterMethod">
+         </action>
+         <action
+                 label="%menu_ruby_add_attr_reader_method"
+                 class="main.kotlin.service.ruby.AddAttrReaderMethod"
+                 menubarPath="m+/ruby/"
+                 id="main.kotlin.service.ruby.AddAttrReaderMethod">
+         </action>
          <action
                  label="%menu_ruby_convert_to_class"
                  class="main.kotlin.service.ruby.ConvertToClass"
