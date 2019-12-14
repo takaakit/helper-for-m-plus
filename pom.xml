@@ -7,15 +7,15 @@
 		<plugin.install>true</plugin.install>
 		<astah.version>8.0</astah.version>
 		<astah.edition>uml,pro</astah.edition>
-        <kotlin.version>1.3.10</kotlin.version>
+        <kotlin.version>1.3.61</kotlin.version>
     </properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main.kotlin</groupId>
 	<artifactId>helper-for-m-plus</artifactId>
 	<version>1.2.0</version>
 	<packaging>jar</packaging>
-	<name>%bundle.name</name>
-	<description>%bundle.description</description>
+	<name>Helper for M PLUS</name>
+	<description>Helper for M PLUS (H4M+) makes settings for M PLUS plug-in at once.</description>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>local_astah_repository</id>
