@@ -2,11 +2,9 @@ package main.kotlin.service.csharp
 // ˅
 import com.change_vision.jude.api.inf.model.IClass
 import com.change_vision.jude.api.inf.model.INamedElement
-import java.util.*
-import java.text.*
 import main.kotlin.service.IMyPluginActionDelegate
 import main.kotlin.util.collector.ClassCollector
-import main.kotlin.util.converter.CppClassConverter
+import main.kotlin.util.converter.CsharpClassConverter
 
 // ˄
 
@@ -27,7 +25,7 @@ class ConvertToEnum : IMyPluginActionDelegate {
 
         for (selectedElement in selectedElements) {
             if (selectedElement !is IClass
-                    || CppClassConverter(selectedElement).isCppClassKind(listOf(CppClassConverter.ClassKind.ENUM))) {
+                    || CsharpClassConverter(selectedElement).isCsharpClassKind(listOf(CsharpClassConverter.ClassKind.ENUM))) {
                 continue
             }
             targetClasses.add(selectedElement)
@@ -40,7 +38,7 @@ class ConvertToEnum : IMyPluginActionDelegate {
     override fun editElements(elements: List<INamedElement>) {
         // ˅
         elements.forEach {
-            CppClassConverter(it as IClass).convertCppClassKind(listOf(CppClassConverter.ClassKind.ENUM))
+            CsharpClassConverter(it as IClass).convertCsharpClassKind(listOf(CsharpClassConverter.ClassKind.ENUM))
             println("Converted to enum :".plus(it.getFullName(".")))
         }
         // ˄

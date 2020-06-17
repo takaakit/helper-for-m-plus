@@ -12,7 +12,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main.kotlin</groupId>
 	<artifactId>helper-for-m-plus</artifactId>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<packaging>jar</packaging>
 	<name>Helper for M PLUS</name>
 	<description>Helper for M PLUS (H4M+) makes settings for M PLUS plug-in at once.</description>
