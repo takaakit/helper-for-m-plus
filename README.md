@@ -1,7 +1,11 @@
+<iframe width="800" height="600" src="./screenshots/DiagramMap.html" frameborder="1"></iframe><br/>
+
+**Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
+
+<br/>
+
 Helper for M PLUS
 ===
-
-English | [日本語](README_ja.md)
 
 Helper for M PLUS (H4M+) makes settings for [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in at once. For example, the following settings.
 * Adding getters and setters of the selected attributes in Python.
