@@ -330,6 +330,12 @@
                  path="m+/go">
          </menu>
          <action
+                 label="%menu_go_convert_to_enum"
+                 class="main.kotlin.service.go.ConvertToEnum"
+                 menubarPath="m+/go/"
+                 id="main.kotlin.service.go.ConvertToEnum">
+         </action>
+         <action
                  label="%menu_go_add_constructor"
                  class="main.kotlin.service.go.AddConstructor"
                  menubarPath="m+/go/"
@@ -856,6 +862,12 @@
                  class="main.kotlin.service.scala.ConvertToObject"
                  menubarPath="m+/scala/"
                  id="main.kotlin.service.scala.ConvertToObject">
+         </action>
+         <action
+                 label="%menu_scala_convert_to_enum"
+                 class="main.kotlin.service.scala.ConvertToEnum"
+                 menubarPath="m+/scala/"
+                 id="main.kotlin.service.scala.ConvertToEnum">
          </action>
          <action
                  label="%menu_scala_convert_to_trait"

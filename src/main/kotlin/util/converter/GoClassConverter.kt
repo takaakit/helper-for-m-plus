@@ -1,23 +1,16 @@
 package main.kotlin.util.converter
 // ˅
 import com.change_vision.jude.api.inf.model.IClass
+
 // ˄
 
-// Convert the Scala class type of the target class.
-class ScalaClassConverter(targetClass: IClass) {
+// Convert the Golang class type of the target class.
+class GoClassConverter(targetClass: IClass) {
     // ˅
     
     // ˄
 
     enum class ClassKind(val value: String) {
-
-        CLASS(""),
-
-        TRAIT("trait"),
-
-        OBJECT("object"),
-
-        CASE("case"),
 
         ENUM("enum");
 
@@ -32,12 +25,12 @@ class ScalaClassConverter(targetClass: IClass) {
         // ˄
 
     // Check whether it is the same as the argument class kind.
-    fun isScalaClassKind(kinds: List<ClassKind>): Boolean {
+    fun isGoClassKind(kinds: List<ClassKind>): Boolean {
         // ˅
         // If the argument kinds dose not exist, return false
         kinds.forEach {
             if (it.value.isNotEmpty()
-                    && !targetClass.stereotypes.contains(it.value)) {
+                && !targetClass.stereotypes.contains(it.value)) {
                 return false
             }
         }
@@ -45,7 +38,7 @@ class ScalaClassConverter(targetClass: IClass) {
         // If kinds other than the argument kinds exist, return false
         ClassKind.values().subtract(kinds).forEach {
             if (it.value.isNotEmpty()
-                    && targetClass.stereotypes.contains(it.value)) {
+                && targetClass.stereotypes.contains(it.value)) {
                 return false
             }
         }
@@ -55,12 +48,12 @@ class ScalaClassConverter(targetClass: IClass) {
     }
 
     // Convert to the argument class kind.
-    fun convertScalaClassKind(kinds: List<ClassKind>) {
+    fun convertGoClassKind(kinds: List<ClassKind>) {
         // ˅
         // Remove the related stereotypes
         ClassKind.values().forEach {
             if (it.value.isNotEmpty()
-                    && targetClass.hasStereotype(it.value)) {
+                && targetClass.hasStereotype(it.value)) {
                 targetClass.removeStereotype(it.value)
             }
         }
@@ -68,7 +61,7 @@ class ScalaClassConverter(targetClass: IClass) {
         // Set stereotypes
         kinds.forEach {
             if (it.value.isNotEmpty()
-                    && !targetClass.hasStereotype(it.value)) {
+                && !targetClass.hasStereotype(it.value)) {
                 targetClass.addStereotype(it.value)
             }
         }
