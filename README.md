@@ -11,20 +11,6 @@ Helper for M PLUS (H4M+) makes settings for [M PLUS](https://sites.google.com/vi
   etc.  
   <img src="screenshots/select_a_setting.png" width="360"><br/>
 
-H4M+ is developed using **Model Driven Development**<sup><a href="#1">1</a></sup> approach.  
-* The model is described by UML using [Astah](http://astah.net/download).  
-* The model is transformed into code using [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in.  
-* The code is **Kotlin**.  
-
-This images are examples of UML diagrams.  
-<a href="screenshots/basic_flow.png"><img src="screenshots/basic_flow.png" height="180"></a>
-<a href="screenshots/overview_behavior.png"><img src="screenshots/overview_behavior.png" height="180"></a>
-<a href="screenshots/overview_structure.png"><img src="screenshots/overview_structure.png" height="180"></a><br/>
-
-<span id="1" style="font-size:x-small">1: Model Driven Development (MDD) is a set of software development approaches based on Model Driven Architecture (MDA).</span>
-
-
-******************************
 
 Available for
 -------------
@@ -45,37 +31,6 @@ Usage
 2. Select a setting in the Menu Bar.  
 3. The model elements are edited.  
 <img src="screenshots/usage.gif" width="600"><br/>
-
-
-Development and Building
-------------------------
-1. Prepare [the Astah plug-in development environment](http://astah.net/tutorial/plug-ins/plugin_tutorial_en/html/devenv.html).  
-2. Open `helper-for-m-plus.asta` in [Astah](http://astah.net/download), and edit the model.
-3. Generate code using [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in.
-4. Open `helper-for-m-plus` directory in [IntelliJ](https://www.jetbrains.com/idea/download/), and edit the code.
-5. Execute `astah-build` command on the console.  
-A plug-in jar file is created under the `target` directory.
-
-
-Contributing
-------------
-We welcome your contributions. Function addition, bug fix, refactoring, etc.  
-The procedure is as follows.  
-
-1. Fork the repository and create your branch from master.
-2. Develop!  
-**Do not include copyrighted model and code** due to the Creative Commons Zero (CC0) license.  
-3. Check that the model and code are not separate. The check procedure is as follows.
-    1. Select a project element in the Structure Tree of Astah.  
-    2. Press the `Generate code` button of M PLUS plug-in.  
-    3. Check that the generated code is not updated.  
-    <img src="screenshots/contributing1.gif" width="600"><br/>
-4. Check that the code can be built. The check procedure is as follows.  
-    1. Open the Intellij terminal.  
-    2. Execute `astah-build` command.  
-    3. Check that build succeeded.  
-    <img src="screenshots/contributing2.gif" width="600"><br/>
-5. Issue the pull request!
 
 
 Licence
