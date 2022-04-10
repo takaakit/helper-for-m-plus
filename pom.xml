@@ -7,7 +7,7 @@
 		<plugin.install>true</plugin.install>
 		<astah.version>8.0</astah.version>
 		<astah.edition>uml,pro</astah.edition>
-        <kotlin.version>1.6.10</kotlin.version>
+        <kotlin.version>1.6.20</kotlin.version>
     </properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main.kotlin</groupId>
