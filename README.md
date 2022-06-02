@@ -9,7 +9,7 @@ Helper for M PLUS (H4M+) makes settings for [M PLUS](https://sites.google.com/vi
 * Setting to generate ArrayList type from the selected associations in Kotlin.
 * Setting to generate C++11 Smart Pointer from the selected associations in C++.  
   etc.  
-  <img src="screenshots/select_a_setting.png" width="360"><br/>
+  <img src="./screenshots/select_a_setting.png" width="360"><br/>
 
 
 Available for
@@ -30,7 +30,7 @@ Usage
 1. Select model elements to be set in the Structure Tree.  
 2. Select a setting in the Menu Bar.  
 3. The model elements are edited.  
-<img src="screenshots/usage.gif" width="600"><br/>
+<img src="./screenshots/usage.gif" width="600"><br/>
 
 
 Licence
