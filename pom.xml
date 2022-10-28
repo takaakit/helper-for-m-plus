@@ -30,68 +30,6 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>3.1.2</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>summary</report>
-							<report>index</report>
-							<report>dependencies</report>
-							<report>dependency-management</report>
-							<report>plugin-management</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-				<version>3.1.1</version>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M5</version>
-				<configuration>
-					<systemPropertyVariables>
-						<file.encoding>utf-8</file.encoding>
-					</systemPropertyVariables>
-					<excludes>
-						<exclude>**/TestUtils.java</exclude>
-						<exclude>learning/**/*.java</exclude>
-					</excludes>
-					<argLine>-Dfile.encoding=UTF-8 -Xmx1024m -Xms128m</argLine>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>3.0.0-M5</version>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<source>${maven.compiler.source}</source>
-					<show>protected</show>
-					<links>
-						<link>http://java.sun.com/javase/ja/8/docs/ja/api/</link>
-						<link>http://members.change-vision.com/javadoc/astah-api/6_2/api/ja/doc/javadoc/</link>
-					</links>
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
 	<build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <outputDirectory>target/classes</outputDirectory>
@@ -104,7 +42,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.1</version>
+				<version>3.1.2</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
@@ -144,7 +82,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.12.0</version>
+				<version>3.12.1</version>
 				<configuration>
 					<locales>ja</locales>
 				</configuration>
@@ -159,13 +97,6 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -184,19 +115,12 @@
                             <goal>compile</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>5.1.6</version>
+				<version>5.1.8</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
@@ -288,12 +212,6 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
