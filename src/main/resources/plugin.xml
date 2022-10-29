@@ -409,6 +409,12 @@
                  id="main.kotlin.service.kotlin.ConvertToLinkedList">
          </action>
          <action
+                 label="%menu_kotlin_convert_to_arraydeque"
+                 class="main.kotlin.service.kotlin.ConvertToArrayDeque"
+                 menubarPath="m+/kotlin/"
+                 id="main.kotlin.service.kotlin.ConvertToArrayDeque">
+         </action>
+         <action
                  label="%menu_kotlin_convert_to_arraylist"
                  class="main.kotlin.service.kotlin.ConvertToArrayList"
                  menubarPath="m+/kotlin/"

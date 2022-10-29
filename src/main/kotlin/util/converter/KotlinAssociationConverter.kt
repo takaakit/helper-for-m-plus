@@ -27,6 +27,8 @@ class KotlinAssociationConverter(targetAssociation: IAssociation) {
 
         ARRAY_LIST("ArrayList"),
 
+        ARRAY_DEQUE("ArrayDeque"),
+
         LINKED_LIST("LinkedList"),
 
         HASH_SET("HashSet"),
