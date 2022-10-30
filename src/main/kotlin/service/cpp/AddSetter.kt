@@ -25,7 +25,7 @@ class AddSetter : IMyPluginActionDelegate {
 
         loop@ for (selectedElemnt in selectedElements) {
             for (operation in (selectedElemnt.owner as IClass).operations) {
-                if (operation.name == "set".plus(selectedElemnt.name.capitalize())) {   // Capitalize the first letter of the attribute name
+                if (operation.name == "set".plus(selectedElemnt.name.replaceFirstChar(Char::titlecase))) {   // Capitalize the first letter of the attribute name
                     continue@loop
                 }
             }
@@ -43,7 +43,7 @@ class AddSetter : IMyPluginActionDelegate {
             val basicModelEditor = ModelEditorFactory.getBasicModelEditor()
             val setter = basicModelEditor.createOperation(
                     (it as IAttribute).owner as IClass,
-                    "set".plus(it.name.capitalize()),    // Capitalize the first letter of the attribute name
+                    "set".plus(it.name.replaceFirstChar(Char::titlecase)),    // Capitalize the first letter of the attribute name
                     "void")
             basicModelEditor.createParameter(setter, "value", it.type)
             println("Added setter :".plus(setter.getFullName(".").plus("()")))

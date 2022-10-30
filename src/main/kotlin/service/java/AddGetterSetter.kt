@@ -30,9 +30,9 @@ class AddGetterSetter : IMyPluginActionDelegate {
             var getterExists = false
             var setterExists = false
             for (operation in (selectedElement.owner as IClass).operations) {
-                if (operation.name == "get".plus(selectedElement.name.capitalize())) { // Capitalize the first letter of the attribute name
+                if (operation.name == "get".plus(selectedElement.name.replaceFirstChar(Char::titlecase))) { // Capitalize the first letter of the attribute name
                     getterExists = true
-                } else if (operation.name == "set".plus(selectedElement.name.capitalize())) { // Capitalize the first letter of the attribute name
+                } else if (operation.name == "set".plus(selectedElement.name.replaceFirstChar(Char::titlecase))) { // Capitalize the first letter of the attribute name
                     setterExists = true
                 }
             }
@@ -55,9 +55,9 @@ class AddGetterSetter : IMyPluginActionDelegate {
             var getterExists = false
             var setterExists = false
             for (operation in (it.owner as IClass).operations) {
-                if (operation.name == "get".plus(it.name.capitalize())) { // Capitalize the first letter of the attribute name
+                if (operation.name == "get".plus(it.name.replaceFirstChar(Char::titlecase))) { // Capitalize the first letter of the attribute name
                     getterExists = true
-                } else if (operation.name == "set".plus(it.name.capitalize())) { // Capitalize the first letter of the attribute name
+                } else if (operation.name == "set".plus(it.name.replaceFirstChar(Char::titlecase))) { // Capitalize the first letter of the attribute name
                     setterExists = true
                 }
             }
@@ -68,7 +68,7 @@ class AddGetterSetter : IMyPluginActionDelegate {
             if (!getterExists) {
                 val getter = basicModelEditor.createOperation(
                         (it as IAttribute).owner as IClass,
-                        "get".plus(it.name.capitalize()),    // Capitalize the first letter of the attribute name
+                        "get".plus(it.name.replaceFirstChar(Char::titlecase)),    // Capitalize the first letter of the attribute name
                         it.type)
                 println("Added getter :".plus(getter.getFullName(".").plus("()")))
             }
@@ -77,7 +77,7 @@ class AddGetterSetter : IMyPluginActionDelegate {
             if (!setterExists) {
                 val setter = basicModelEditor.createOperation(
                         (it as IAttribute).owner as IClass,
-                        "set".plus(it.name.capitalize()),    // Capitalize the first letter of the attribute name
+                        "set".plus(it.name.replaceFirstChar(Char::titlecase)),    // Capitalize the first letter of the attribute name
                         "void")
                 basicModelEditor.createParameter(setter, "value", it.type)
                 println("Added setter :".plus(setter.getFullName(".").plus("()")))

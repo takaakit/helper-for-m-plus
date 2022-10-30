@@ -28,7 +28,7 @@ class AddGetter : IMyPluginActionDelegate {
 
         loop@ for (selectedElement in selectedElements) {
             for (operation in (selectedElement.owner as IClass).operations) {
-                if (operation.name == "get".plus(selectedElement.name.capitalize())) {   // Capitalize the first letter of the attribute name
+                if (operation.name == "get".plus(selectedElement.name.replaceFirstChar(Char::titlecase))) {   // Capitalize the first letter of the attribute name
                     continue@loop
                 }
             }
@@ -46,7 +46,7 @@ class AddGetter : IMyPluginActionDelegate {
             val basicModelEditor = ModelEditorFactory.getBasicModelEditor()
             val getter = basicModelEditor.createOperation(
                     (it as IAttribute).owner as IClass,
-                    "get".plus(it.name.capitalize()),    // Capitalize the first letter of the attribute name
+                    "get".plus(it.name.replaceFirstChar(Char::titlecase)),    // Capitalize the first letter of the attribute name
                     it.type)
             println("Added getter :".plus(getter.getFullName(".").plus("()")))
         }
