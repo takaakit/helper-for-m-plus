@@ -87,7 +87,7 @@ class KotlinAssociationConverter(targetAssociation: IAssociation) {
         // ˅
         // Remove the related stereotypes
         for (stereotype in targetAssociation.stereotypes) {
-            if (Regex("collection_kind *=.*").containsMatchIn(stereotype.toString().trim().toLowerCase())) {
+            if (Regex("collection_kind *=.*").containsMatchIn(stereotype.toString().trim().lowercase())) {
                 targetAssociation.removeStereotype(stereotype.toString())
             } else {
                 for (collectionKind in CollectionKind.values()) {
@@ -100,7 +100,7 @@ class KotlinAssociationConverter(targetAssociation: IAssociation) {
 
         // Clear the related taggedValues
         for (taggedValue in targetAssociation.taggedValues) {
-            if (taggedValue.key.trim().toLowerCase() == "collection_kind") {
+            if (taggedValue.key.trim().lowercase() == "collection_kind") {
                 taggedValue.value = ""
             }
         }
@@ -113,7 +113,7 @@ class KotlinAssociationConverter(targetAssociation: IAssociation) {
             } catch (e: InvalidEditingException) {
                 // Set "collection_kind" tagged value
                 for (taggedValue in targetAssociation.taggedValues) {
-                    if (taggedValue.key.trim().toLowerCase() == "collection_kind") {
+                    if (taggedValue.key.trim().lowercase() == "collection_kind") {
                         taggedValue.value = it.value
                     }
                 }
