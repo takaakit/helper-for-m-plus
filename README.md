@@ -20,7 +20,7 @@ Available for
 
 Installation
 ------------
-* **Astah** : Download Astah UML or Professional from [Change Vision site](http://astah.net/download), and install.  
+* **Astah** : Download Astah UML or Professional from [Change Vision site](https://astah.net/download), and install.  
 * **M PLUS** plug-in : Download from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
 * **Helper for M PLUS** plug-in : Download from [release page](https://github.com/takaakit/helper-for-m-plus/releases), and install.  
 
@@ -38,4 +38,4 @@ Licence
 Helper for M PLUS (H4M+) is licensed under the Creative Commons Zero (CC0) license.  
 The model and code of H4M+ are completely free to use.
 
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed)
+[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](https://creativecommons.org/publicdomain/zero/1.0/deed)
