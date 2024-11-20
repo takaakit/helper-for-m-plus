@@ -1,4 +1,4 @@
-[<img src="./screenshots/DiagramMap.svg">](https://raw.githubusercontent.com/takaakit/helper-for-m-plus/master/screenshots/DiagramMap.svg)
+[<img src="./screenshots/AllDiagram.svg">](https://raw.githubusercontent.com/takaakit/helper-for-m-plus/master/screenshots/AllDiagram.svg)
 
 Helper for M PLUS
 ===
