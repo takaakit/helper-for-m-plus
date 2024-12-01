@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0  http://maven.apache.org/maven-v4_0_0.xsd">
 	<properties>
 		<bundle.symbolicName>main.kotlin.helper-for-m-plus</bundle.symbolicName>
 		<bundle.namespace>main.kotlin</bundle.namespace>
 		<plugin.install>true</plugin.install>
-		<astah.version>10.0</astah.version>
+		<astah.version>10.0.0</astah.version>
+		<astah.depend.version>10.0.0</astah.depend.version>
 		<astah.edition>uml,pro</astah.edition>
-        <kotlin.version>2.0.21</kotlin.version>
-    </properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<kotlin.version>2.0.21</kotlin.version>
+	</properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main.kotlin</groupId>
 	<artifactId>helper-for-m-plus</artifactId>
@@ -20,7 +23,7 @@
 		<pluginRepository>
 			<id>local_astah_repository</id>
 			<name>Local Astah* Plugin Repository</name>
-			<url>file://${env.M2_HOME}/repository/</url>
+			<url>file://${env.MAVEN_HOME}/repository/</url>
 			<layout>default</layout>
 			<snapshots>
 				<enabled>true</enabled>
@@ -32,7 +35,7 @@
 	</pluginRepositories>
 	<build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <outputDirectory>target/classes</outputDirectory>
+		<outputDirectory>target/classes</outputDirectory>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
 		<resources>
 			<resource>
@@ -41,9 +44,8 @@
 		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.2</version>
+				<version>3.8.1</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
@@ -61,12 +63,30 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
+				<executions>
+					<execution>
+						<id>filter-properties</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.change_vision.astah</groupId>
+				<artifactId>astah-maven-plugin</artifactId>
+				<version>1.0.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+				<version>${kotlin.version}</version>
 				<executions>
 					<execution>
 						<id>compile</id>
@@ -75,50 +95,56 @@
 							<goal>compile</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>test-compile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>test-compile</goal>
+						</goals>
+					</execution>
 				</executions>
+				<configuration>
+					<jvmTarget>${maven.compiler.target}</jvmTarget>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<executions>
+					<execution>
+						<id>default-compile</id>
+						<phase>none</phase>
+					</execution>
+					<execution>
+						<id>default-testCompile</id>
+						<phase>none</phase>
+					</execution>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>testCompile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<encoding>UTF-8</encoding>
+					<source>21</source>
+					<target>21</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.change_vision.astah</groupId>
-				<artifactId>astah-maven-plugin</artifactId>
-				<version>1.0.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.12.1</version>
-				<configuration>
-					<locales>ja</locales>
-				</configuration>
-			</plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <jvmTarget>1.8</jvmTarget>
-                </configuration>
-            </plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>5.1.8</version>
+				<version>5.1.9</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
@@ -129,62 +155,29 @@
 						</goals>
 					</execution>
 				</executions>
-				<!-- | the following instructions build a simple set of public/private 
-					classes into an OSGi bundle -->
 				<configuration>
 					<unpackBundle>true</unpackBundle>
 					<instructions>
 						<Bundle-SymbolicName>${bundle.symbolicName}; singleton:=true</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<!-- | assume public classes are in the top package, and private classes 
-							are under ".internal" -->
-						<Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${project.version}"</Export-Package>
-						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
+						<Export-Package>
+							!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${project.version}"
+						</Export-Package>
+						<Import-Package>
+							kotlin.*;resolution:=optional,*
+						</Import-Package>
 						<Bundle-Activator>${bundle.namespace}.Activator</Bundle-Activator>
 						<Astah-Version>${astah.version}</Astah-Version>
 						<Astah-Edition>${astah.edition}</Astah-Edition>
-						<!-- | each module can override these defaults in their osgi.bnd file -->
 						<_include>-osgi.bnd</_include>
-						<Embed-Dependency>*;scope=compile|runtime;type=!pom</Embed-Dependency>
+						<Embed-Dependency>
+							*;scope=compile|runtime;type=!pom
+						</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>
 					</instructions>
 				</configuration>
 			</plugin>
-        </plugins>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-dependency-plugin
-										</artifactId>
-										<versionRange>
-											[3.1.2,)
-										</versionRange>
-										<goals>
-											<goal>copy-dependencies</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
@@ -196,14 +189,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.2.0</version>
+			<artifactId>osgi.core</artifactId>
+			<version>8.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>4.2.0</version>
+			<artifactId>osgi.cmpn</artifactId>
+			<version>7.0.0</version>
 			<scope>provided</scope>
 		</dependency>
         <dependency>
@@ -211,5 +204,11 @@
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-test</artifactId>
+			<version>${kotlin.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
