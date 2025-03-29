@@ -15,7 +15,7 @@ Helper for m plus (H4M+) makes settings for [m plus](https://sites.google.com/vi
 Available for
 -------------
 * Astah UML/Professional **ver.10.0.0** or higher.
-* m plus plug-in **ver.3.0.0-preview** or higher.
+* m plus plug-in **ver.3.1.3-preview.1** or higher.
 
 
 Installation
