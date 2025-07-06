@@ -5,8 +5,8 @@
 		<bundle.symbolicName>main.kotlin.helper-for-m-plus</bundle.symbolicName>
 		<bundle.namespace>main.kotlin</bundle.namespace>
 		<plugin.install>true</plugin.install>
-		<astah.version>10.0.0</astah.version>
-		<astah.depend.version>10.0.0</astah.depend.version>
+		<astah.version>10.1.0</astah.version>
+		<astah.depend.version>10.1.0</astah.depend.version>
 		<astah.edition>uml,pro</astah.edition>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
