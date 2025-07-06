@@ -10,7 +10,7 @@
 		<astah.edition>uml,pro</astah.edition>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<kotlin.version>2.1.10</kotlin.version>
+		<kotlin.version>2.2.0</kotlin.version>
 	</properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main.kotlin</groupId>
