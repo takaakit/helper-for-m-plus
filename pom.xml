@@ -11,7 +11,6 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.release>21</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<kotlin.version>2.2.0</kotlin.version>
 	</properties>
 	<modelVersion>4.0.0</modelVersion>
