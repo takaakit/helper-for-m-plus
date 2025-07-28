@@ -6,7 +6,6 @@
 		<bundle.namespace>main.kotlin</bundle.namespace>
 		<plugin.install>true</plugin.install>
 		<astah.version>10.1.0</astah.version>
-		<astah.depend.version>10.1.0</astah.depend.version>
 		<astah.edition>uml,pro</astah.edition>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
@@ -19,7 +18,7 @@
 	<groupId>main.kotlin</groupId>
 	<artifactId>helper-for-m-plus</artifactId>
 	<version>1.2.4</version>
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 	<name>Helper for m plus</name>
 	<description>Helper for m plus (H4M+) makes settings for m plus plug-in at once.</description>
 	<pluginRepositories>
@@ -37,7 +36,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
 		<outputDirectory>target/classes</outputDirectory>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
 		<resources>
@@ -84,7 +83,7 @@
 			<plugin>
 				<groupId>com.change_vision.astah</groupId>
 				<artifactId>astah-maven-plugin</artifactId>
-				<version>1.0.0</version>
+				<version>1.1.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>
@@ -113,7 +112,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.14.0</version>
 				<executions>
 					<execution>
 						<id>default-compile</id>
@@ -148,7 +147,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>5.1.9</version>
+				<version>6.0.0</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
